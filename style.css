@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --c-green: #44ffa1;
+  --c-purple-9: #24053e;
+  --c-purple-5: #584d62;
+  --c-purple-1: #fcf8ff;
+  --c-white: #fff;
+
+  /* Typography */
+  /* --font-size */
+  --fs-80: 5rem;
+  --fs-56: 3.5rem;
+  --fs-48: 3rem;
+  --fs-32: 2rem;
+  --fs-18: 1.125rem;
+  /* --font-weight */
+  --fw-bold: 700;
+  --fw-semibold: 600;
+  --fw-regular: 400;
+  /* --line-height */
+  --lh-180: 180%;
+  --lh-150: 150%;
+  --lh-120: 120%;
+  --lh-110: 110%;
+
+  /* Spacing */
+  --s-296: 18.5rem;
+  --s-168: 10.5rem;
+  --s-144: 9rem;
+  --s-128: 8rem;
+  --s-112: 7rem;
+  --s-88: 5.5rem;
+  --s-80: 5rem;
+  --s-56: 3.5rem;
+  --s-44: 2.75rem;
+  --s-40: 2.5rem;
+  --s-32: 2rem;
+  --s-28: 1.75rem;
+  --s-20: 1.25rem;
+  --s-16: 1rem;
+  --s-12: 0.75rem;
+  --s-8: 0.5rem;
+}
+
+@font-face {
+  font-family: "Fraunces 144";
+  src: url(fraunces/static/Fraunces_144pt-SemiBold.ttf) format("ttf");
+  font-display: swap;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+}
+
+header {
+  background: var(--c-purple-9);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--s-32) var(--s-20) 0;
+}
+
+nav button {
+  font-family: "Manrope", sans-serif;
+  font-size: var(--fs-18);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-180);
+  color: white;
+  background: none;
+  border: none;
+  border-bottom: 3px solid var(--c-green);
+
+  cursor: pointer;
+}
+
+nav button:hover {
+  color: var(--c-green);
+}
+
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-40);
+  align-items: center;
+  padding: var(--s-56) var(--s-20) var(--s-144);
+}
+
+.hero h1 {
+  font-family: "Fraunces 144";
+  font-size: var(--fs-48);
+  font-weight: var(--fw-semibold);
+  line-height: 100%;
+  color: var(--c-white);
+}
+
+.green-underline {
+  border-bottom: 3px solid var(--c-green);
+}
+
+.learn {
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-180);
+  padding: 0.625rem var(--s-32);
+  color: var(--c-purple-9);
+  background-color: var(--c-green);
+  border: 2px solid var(--c-green);
+  cursor: pointer;
+}
+
+.learn:hover {
+  background: transparent;
+  color: var(--c-green);
+}
+
+.curve {
+  position: relative;
+  height: 1.5rem;
+  width: 100%;
+  background: var(--c-green);
+  clip-path: ellipse(60% 100% at 50% 0%);
+  z-index: -1;
+}
+
+.hero-img {
+  width: 100%;
+  padding: 0 var(--s-20);
+  margin-top: -6.5rem;
+  margin-bottom: 4rem;
+  /* background-color: var(--c-purple-1); */
+}
